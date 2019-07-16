@@ -1,14 +1,16 @@
-# Node module cleaner
+<h2 align="center">Node module cleaner</h2>
 
-Meant to reduce attach surface of files left over from a yarn install.
+**Small**
 
+**No dependencies**
+
+Meant to reduce attack surface of files left over from a yarn install.
 
 Some examples of using unused code in an attack include
 
 - [Event stream](https://schneider.dev/blog/event-stream-vulnerability-explained/)
 - [prototype pollution](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf)
-attack by utilizing a file in a test directory
-
+  attack by utilizing a file in a test directory
 
 # Why
 
@@ -18,7 +20,6 @@ However most people do not ignore folders that are not useful for the runtime of
 **Test directories, example directories, documentation files, hidden files, CI/CD files, development configurations, License, readmes, etc are often included.**
 
 Removing unneeded files helps reduce storage requirements and attack surface. In this project itself, running this program will reduce the node_modules folder from `142MB` to `114MB`.
-
 
 # Warnings
 
@@ -33,6 +34,7 @@ Removing unneeded files helps reduce storage requirements and attack surface. In
 - map files
 - all hidden files, files beginning with a period
 - files with no extension.
+- C++ and C source/header files
 
 # Install
 
@@ -46,9 +48,12 @@ in your `package.json` include a `postinstall` script like so
 
 ```json
 {
-
   "scripts": {
     "postinstall": "nmc"
   }
 }
 ```
+
+# Notes
+
+_There are a lot of dev dependencies not being used, they are included as part of the testing of this script._
