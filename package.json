@@ -6,6 +6,11 @@
   "scripts": {
     "test": "jest"
   },
+  "nmc": {
+    "ignore": [
+      "ts-jest"
+    ]
+  },
   "author": "Anthony Ou",
   "bin": {
     "nmc": "index.js"

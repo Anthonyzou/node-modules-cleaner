@@ -1,8 +1,7 @@
 <h2 align="center">Node module cleaner</h2>
 
-**Small**
-
-**No dependencies**
+** Small **
+** No dependencies **
 
 Meant to reduce attack surface of files left over from a yarn install.
 
