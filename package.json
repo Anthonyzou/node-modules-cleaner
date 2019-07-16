@@ -1,0 +1,25 @@
+{
+  "name": "node-modules-cleaner",
+  "version": "0.0.1",
+  "description": "Clean node modules after install",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Anthony Ou",
+  "bin": {
+    "nmc": "index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@types/node": "12.6.3",
+    "bcrypt": "3.0.6",
+    "event-stream": "4.0.1",
+    "glob": "7.1.4",
+    "jest": "24.8.0",
+    "sharp": "0.22.1",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.3"
+  }
+}
