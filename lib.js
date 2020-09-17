@@ -1,15 +1,6 @@
 var { readdir, stat, unlink, writeFile } = require('fs').promises;
-var { readFileSync } = require('fs');
 var { resolve } = require('path');
 
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(search, this_len) {
-    if (this_len === undefined || this_len > this.length) {
-      this_len = this.length;
-    }
-    return this.substring(this_len - search.length, this_len) === search;
-  };
-}
 var diff = (arrA, arrB) => {
   return arrA
     .filter(x => !arrB.includes(x))
